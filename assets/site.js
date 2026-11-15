@@ -137,7 +137,7 @@ $$('[data-tabs]').forEach(function(w){
   tabs.forEach(function(t,i){
     on(t,'click',function(){sel(t);});
     on(t,'keydown',function(e){var k=e.key,n=null;
-      if(k==='ArrowRight')n=tabs[(i+1)%tabs.length];else if(k==='ArrowLeft')n=tabs[(i-1+tabs.length)%tabs.length];else if(k==='Home')n=tabs[0];else if(k==='End')n=tabs[tabs.length-1];
+      if(k==='ArrowRight'||k==='ArrowDown')n=tabs[(i+1)%tabs.length];else if(k==='ArrowLeft'||k==='ArrowUp')n=tabs[(i-1+tabs.length)%tabs.length];else if(k==='Home')n=tabs[0];else if(k==='End')n=tabs[tabs.length-1];
       if(n){e.preventDefault();sel(n,true);}});
   });
 });
@@ -306,4 +306,25 @@ $$('.prose h2').forEach(function(h){
     .then(function(){setTimeout(function(){bt.textContent='Copy link';bt.classList.remove('ok');},2000);});});
   h.appendChild(bt);
 });
+
+/* ---------- v6: architecture diagram, animated visuals, scroll reveal */
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+$$('[data-arch]').forEach(function(a){
+  var bs=$$('.arch-b',a),lock=null;
+  function set(f){if(f)a.setAttribute('data-active',f);else a.removeAttribute('data-active');bs.forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-fam')===f);});}
+  $$('.fam',a).forEach(function(g){var f=g.getAttribute('data-fam');
+    on(g,'mouseenter',function(){set(f);});on(g,'mouseleave',function(){set(lock);});
+    on(g,'click',function(){lock=lock===f?null:f;set(lock);});});
+  bs.forEach(function(b){var f=b.getAttribute('data-fam');
+    on(b,'click',function(){lock=lock===f?null:f;set(lock);});
+    on(b,'mouseenter',function(){set(f);});on(b,'mouseleave',function(){set(lock);});
+    on(b,'focus',function(){set(f);});on(b,'blur',function(){set(lock);});});
+});
+if('IntersectionObserver' in window){
+  var vio=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('is-paused',!e.isIntersecting);});});
+  $$('[data-arch],[data-viz]').forEach(function(v){vio.observe(v);});
+  if(!RM){de.classList.add('rv-on');
+    var rio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');rio.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});
+    $$('.rv').forEach(function(r){rio.observe(r);});}
+}
 })();
