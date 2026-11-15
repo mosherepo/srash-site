@@ -951,3 +951,5 @@ input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-sea
 @media print{.jump,.paths-s{display:none}.cap{border:0;padding:0}}
 @media (min-width:1024px){.nav-b{white-space:nowrap}}
 @media (min-width:1024px) and (max-width:1180px){.nav-b{padding:0 7px;font-size:.9375rem}.nav-l{gap:0}.hdr .logo img{width:110px;height:auto}}
+/* v7.1: the Oracle "O" is only recognisable in Oracle red; a black or grey capsule reads as a missing logo */
+.lt-i img[src*="/tech/oracle.svg"],.lt-i img[src*="/tech/oci.svg"],.band-r img[src*="/tech/oracle.svg"],.band-r img[src*="/tech/oci.svg"]{filter:none;opacity:1}
