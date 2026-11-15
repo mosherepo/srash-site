@@ -698,7 +698,7 @@ input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-sea
 .lt-i{flex:none;display:grid;place-items:center;width:28px;height:28px}
 .lt-i img{width:24px;height:24px;object-fit:contain;filter:grayscale(1) brightness(0);opacity:.82;transition:filter .25s,opacity .25s}
 .lt:hover{background:var(--mist)}
-.lt:hover .lt-i img{filter:none;opacity:1}
+.lt-i img.lt-g{filter:grayscale(1) contrast(1.3) brightness(.85);opacity:.85}.lt-i img.lt-d{filter:grayscale(1) brightness(.55) contrast(1.8);opacity:.9}.lt:hover .lt-i img,.lt:hover .lt-i img.lt-g{filter:none;opacity:1}
 .lt-m{display:grid;place-items:center;width:26px;height:26px;border:1.5px solid var(--ink);border-radius:5px;font-size:.8125rem;font-weight:700;color:var(--ink);line-height:1;opacity:.82}
 .lt:hover .lt-m{opacity:1}
 .lt-n{min-width:0}
