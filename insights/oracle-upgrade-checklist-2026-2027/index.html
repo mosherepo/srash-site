@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oracle Upgrade Checklist 2026–2027: Database 26ai, WebLogic 14.1.2, RDS Custom | SRASH Insights</title>
+<meta name="description" content="A practical 12-point checklist for Oracle upgrades in 2026 and 2027: support dates, WebLogic 14.1.2 and JDK 17/21, Database 26ai with AutoUpgrade and multitenant, RDS Custom exits, testing and rollback.">
+<link rel="canonical" href="https://srash.io/insights/oracle-upgrade-checklist-2026-2027/">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#081631">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="SRASH">
+<meta property="og:title" content="Oracle Upgrade Checklist 2026–2027: Database 26ai, WebLogic 14.1.2, RDS Custom | SRASH Insights">
+<meta property="og:description" content="A practical 12-point checklist for Oracle upgrades in 2026 and 2027: support dates, WebLogic 14.1.2 and JDK 17/21, Database 26ai with AutoUpgrade and multitenant, RDS Custom exits, testing and rollback.">
+<meta property="og:url" content="https://srash.io/insights/oracle-upgrade-checklist-2026-2027/">
+<meta property="og:image" content="https://srash.io/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Oracle Upgrade Checklist 2026–2027: Database 26ai, WebLogic 14.1.2, RDS Custom | SRASH Insights">
+<meta name="twitter:description" content="A practical 12-point checklist for Oracle upgrades in 2026 and 2027: support dates, WebLogic 14.1.2 and JDK 17/21, Database 26ai with AutoUpgrade and multitenant, RDS Custom exits, testing and rollback.">
+<meta name="twitter:image" content="https://srash.io/assets/og.png">
+<link rel="icon" href="/srash-site/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/srash-site/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/srash-site/apple-touch-icon.png">
+<link rel="preload" href="/srash-site/assets/fonts/sourceserif4-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/srash-site/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/srash-site/assets/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ProfessionalService","@id":"https://srash.io/#org","name":"SRASH","legalName":"SRASH Digital LLC","url":"https://srash.io/","email":"hello@srash.io","logo":"https://srash.io/assets/logo.png","image":"https://srash.io/assets/og.png","address":{"@type":"PostalAddress","streetAddress":"11440 W Bernardo Court, Suite 300, PMB 3006","addressLocality":"San Diego","addressRegion":"CA","postalCode":"92127","addressCountry":"US"},"areaServed":["US","Worldwide"],"description":"Independent Oracle engineering firm: fixed-price WebLogic 14.1.2 upgrades, Amazon RDS Custom for Oracle exits, Oracle Database upgrades, managed DBA, AI vector search, Forms to APEX and senior contract engineers.","knowsAbout":["WebLogic 14.1.2 upgrade","Oracle Fusion Middleware upgrade","Amazon RDS Custom for Oracle migration","Oracle Database 26ai upgrade","AutoUpgrade","Oracle Data Guard","Oracle Forms to APEX","Oracle AI Vector Search","pgvector","Managed DBA services","Oracle Database@AWS"]},{"@type":"Article","@id":"https://srash.io/insights/oracle-upgrade-checklist-2026-2027/#article","headline":"The Oracle upgrade checklist for 2026–2027: 12 checks before you start","description":"A practical 12-point checklist for Oracle upgrades in 2026 and 2027: support dates, WebLogic 14.1.2 and JDK 17/21, Database 26ai with AutoUpgrade and multitenant, RDS Custom exits, testing and rollback.","url":"https://srash.io/insights/oracle-upgrade-checklist-2026-2027/","mainEntityOfPage":"https://srash.io/insights/oracle-upgrade-checklist-2026-2027/","datePublished":"2026-11-15","dateModified":"2026-11-15","image":"https://srash.io/assets/og.png","author":{"@id":"https://srash.io/#org"},"publisher":{"@id":"https://srash.io/#org"},"citation":["https://www.oracle.com/assets/lsp-tech-chart-069290.pdf","https://docs.oracle.com/en/middleware/fusion-middleware/endsupport.html","https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/RDS-Custom-for-Oracle-end-of-support.html","https://docs.oracle.com/en/middleware/fusion-middleware/14.1.2/infup/introduction-upgrading-oracle-fusion-middleware-infrastructure-12c.html","https://docs.oracle.com/en/middleware/fusion-middleware/weblogic-server/14.1.2/notes/whatsnew.html","https://docs.oracle.com/en/database/oracle/oracle-database/26/fppad/patching-and-upgrading-oracle-ai-database/upgrading-oracle-ai-database.html","https://docs.oracle.com/en/database/oracle/oracle-database/26/upgrd/upgrade-pdb-noncdbs-replay-upgrade-autoupgrade-fpp-gold-image.html","https://www.oracle.com/database/faq/"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://srash.io/"},{"@type":"ListItem","position":2,"name":"Insights","item":"https://srash.io/insights/"},{"@type":"ListItem","position":3,"name":"Checklist","item":"https://srash.io/insights/oracle-upgrade-checklist-2026-2027/"}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="alert" role="note"><div class="wrap"><span><strong class="long">Fusion Middleware 12c Premier Support ends in December 2026</strong><strong class="short">WebLogic 12c support ends Dec 2026</strong><span class="hide-sm"> &middot; <span data-deadline="2026-12-31">&nbsp;</span></span></span><a href="/srash-site/contact/"><span class="long">Book a free 30-minute deadline check</span><span class="short">Free deadline check</span> <span class="arr" aria-hidden="true">&rarr;</span></a></div></div>
+<header class="site-header"><div class="wrap hdr">
+<a class="logo" href="/srash-site/" aria-label="SRASH home"><img src="/srash-site/assets/logo.svg" alt="" width="32" height="32"><span>SRASH<small>Oracle engineering</small></span></a>
+<button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Open menu"><span></span><span></span><span></span></button>
+<nav id="nav" class="nav" aria-label="Main"><ul>
+<li class="has-mega"><button type="button" aria-expanded="false" aria-controls="mega-sol">Solutions <svg class="caret" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+<div class="mega" id="mega-sol"><div class="mega-in">
+<div class="mega-feature"><p class="mega-k">Start here</p><p class="mega-t">Two Oracle deadlines, one fixed-price plan</p><p>Fusion Middleware 12c Premier Support ends in Dec 2026. RDS Custom for Oracle retires on Mar 31, 2027.</p><a href="/srash-site/solutions/">All solutions <span class="arr" aria-hidden="true">&rarr;</span></a></div>
+<div class="mega-cols"><div><p class="mega-k">Deadline programs</p><ul><li><a href="/srash-site/solutions/weblogic-14-upgrade/"><strong>WebLogic 14.1.2 Upgrade</strong><span>12c to 14.1.2 before Dec 2026</span></a></li><li><a href="/srash-site/solutions/rds-custom-exit/"><strong>RDS Custom for Oracle Exit</strong><span>Off RDS Custom before Mar 31, 2027</span></a></li></ul></div><div><p class="mega-k">Core services</p><ul><li><a href="/srash-site/solutions/oracle-database-upgrade-migration/"><strong>Oracle Database Upgrade &amp; Migration</strong><span>19c, 26ai, multitenant, cloud moves</span></a></li><li><a href="/srash-site/solutions/managed-dba/"><strong>Managed &amp; Fractional DBA</strong><span>Retainer DBA, tuning, cost reviews</span></a></li><li><a href="/srash-site/solutions/ai-vector-search/"><strong>AI &amp; Vector Search</strong><span>Vector search on Oracle 26ai, pgvector</span></a></li><li><a href="/srash-site/solutions/forms-to-apex/"><strong>Oracle Forms to APEX</strong><span>Modernize Forms one module at a time</span></a></li><li><a href="/srash-site/solutions/contract-engineers/"><strong>Senior Contract Engineers</strong><span>Senior Oracle engineers for your team</span></a></li></ul></div></div>
+</div></div></li>
+<li><a href="/srash-site/#deadlines">Deadlines</a></li>
+<li><a href="/srash-site/#engage">How we engage</a></li>
+<li><a href="/srash-site/insights/" aria-current="page">Insights</a></li>
+<li><a href="/srash-site/about/">About</a></li>
+<li class="nav-cta"><a class="btn btn-navy btn-sm" href="/srash-site/contact/">Talk to us</a></li>
+</ul></nav></div></header>
+<main id="main">
+<section class="hero hero-sm article-hero"><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="/srash-site/">Home</a> <span aria-hidden="true">/</span> <a href="/srash-site/insights/">Insights</a> <span aria-hidden="true">/</span> <span aria-current="page">Checklist</span></nav>
+<p class="eyebrow">Checklist</p><h1>The Oracle upgrade checklist for 2026–2027: 12 checks before you start</h1><p class="lede">Support dates, JDK 17/21, AutoUpgrade, multitenant, testing and rollback: twelve checks that keep an upgrade on schedule.</p>
+<p class="meta">By the SRASH team &middot; <time datetime="2026-11-15">November 15, 2026</time> &middot; 7 min read</p></div></section>
+<section class="section"><div class="wrap art-grid">
+<article class="prose"><div class="keyfacts"><h2>Key facts</h2><ul><li>Fusion Middleware 12c: Premier Support ends <strong>Dec 2026</strong>, Extended <strong>Dec 2027</strong>.</li><li>RDS Custom for Oracle: retires <strong>Mar 31, 2027</strong>.</li><li>Oracle Database 21c: Premier Support ends <strong>Jul 2027</strong>, no Extended Support.</li><li>Oracle Database 19c: Premier <strong>Dec 2029</strong>, Extended <strong>Dec 2032</strong>. 26ai: Premier to <strong>Dec 2031</strong>.</li></ul></div>
+
+<h2>Scope and dates</h2>
+<h3>1. Build one inventory</h3>
+<p>List every database, middleware domain and application tier with its version, patch level, edition, platform and owner. Upgrades slip most often because of a system nobody listed.</p>
+<h3>2. Put the support dates next to each line</h3>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Product</th><th scope="col">Date</th><th scope="col">What happens</th></tr></thead>
+<tbody>
+<tr><td>Fusion Middleware 12c (12.2.1.4 / 12.2.1.19)</td><td>Dec 2026</td><td>Premier Support ends</td></tr>
+<tr><td>Amazon RDS Custom for Oracle</td><td>Mar 31, 2027</td><td>Service retires; console and resources inaccessible</td></tr>
+<tr><td>Oracle Database 21c</td><td>Jul 2027</td><td>Premier Support ends; no Extended Support</td></tr>
+<tr><td>Fusion Middleware 12c</td><td>Dec 2027</td><td>Extended Support ends</td></tr>
+<tr><td>Oracle Database 19c</td><td>Dec 2029</td><td>Premier Support ends; Extended to Dec 2032</td></tr>
+<tr><td>Oracle AI Database 26ai</td><td>Dec 2031</td><td>Premier Support ends; Extended to be determined</td></tr>
+</tbody></table></div>
+<h3>3. Work backwards from the date</h3>
+<p>Count the environments you must upgrade, add a rehearsal for each, and add change freezes. If the result starts before today, the project is already late.</p>
+<h2>Middleware</h2>
+<h3>4. Confirm the path to 14.1.2</h3>
+<p>Oracle documents the upgrade to 14.1.2 from 12.2.1.4. Older releases need a staged path or a clean build with WebLogic Deploy Tooling.</p>
+<h3>5. Test on JDK 17 or 21 first</h3>
+<p>WebLogic 14.1.2 is certified on JDK 17 and 21. Run your applications on the new JDK in a test domain before anything else; it is where most surprises come from.</p>
+<h3>6. Plan for the Remote Console</h3>
+<p>The classic Administration Console was removed in 14.1.2. Update runbooks, training and any scripts that relied on it.</p>
+<h2>Database</h2>
+<h3>7. Use AutoUpgrade</h3>
+<p>For 26ai, Oracle states AutoUpgrade and Replay Upgrade are the only supported upgrade methods; DBUA and the manual Parallel Upgrade Utility are desupported. Run AutoUpgrade in analyze mode early to see the fix-up list.</p>
+<h3>8. Plan the multitenant conversion</h3>
+<p>Releases after 19c are multitenant only, so a non-CDB is converted to a pluggable database. Once the conversion completes, the AutoUpgrade restore point can no longer take you back, so take and test a backup first.</p>
+<h3>9. Check the direct path</h3>
+<p>Oracle supports direct upgrades to 26ai from 19c and 21c. Anything older goes through an intermediate release.</p>
+<h2>Cloud</h2>
+<h3>10. Decide RDS Custom targets per database</h3>
+<p>For RDS Custom for Oracle, compare Oracle on EC2 (the path AWS documents), Amazon RDS for Oracle and Oracle Database@AWS, and choose RMAN active duplication or Data Guard per database.</p>
+<h2>Proof</h2>
+<h3>11. Baseline performance before you change anything</h3>
+<p>Capture AWR reports and key timings before the upgrade, so you can prove afterwards that nothing got slower, or find out quickly if something did.</p>
+<h3>12. Write the rollback plan and rehearse it</h3>
+<p>Every cut-over needs a timed rehearsal and a tested way back. Keep the old system available until the new one has run through a full business cycle.</p>
+
+<div class="sources"><h2>Sources</h2><ul><li><a href="https://www.oracle.com/assets/lsp-tech-chart-069290.pdf" rel="noopener" target="_blank">Oracle Lifetime Support Policy: Coverage for Technology Products (PDF)</a></li><li><a href="https://docs.oracle.com/en/middleware/fusion-middleware/endsupport.html" rel="noopener" target="_blank">Oracle: End of Premier and Extended Support for Fusion Middleware 12c</a></li><li><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/RDS-Custom-for-Oracle-end-of-support.html" rel="noopener" target="_blank">AWS: RDS Custom for Oracle end of support</a></li><li><a href="https://docs.oracle.com/en/middleware/fusion-middleware/14.1.2/infup/introduction-upgrading-oracle-fusion-middleware-infrastructure-12c.html" rel="noopener" target="_blank">Oracle: Upgrading Fusion Middleware Infrastructure to 14c (14.1.2.0.0)</a></li><li><a href="https://docs.oracle.com/en/middleware/fusion-middleware/weblogic-server/14.1.2/notes/whatsnew.html" rel="noopener" target="_blank">Oracle: What&#x27;s New in WebLogic Server 14.1.2.0.0</a></li><li><a href="https://docs.oracle.com/en/database/oracle/oracle-database/26/fppad/patching-and-upgrading-oracle-ai-database/upgrading-oracle-ai-database.html" rel="noopener" target="_blank">Oracle: Upgrading Oracle AI Database (AutoUpgrade)</a></li><li><a href="https://docs.oracle.com/en/database/oracle/oracle-database/26/upgrd/upgrade-pdb-noncdbs-replay-upgrade-autoupgrade-fpp-gold-image.html" rel="noopener" target="_blank">Oracle: Using Other Methods for Oracle Database Upgrades (non-CDB desupport)</a></li><li><a href="https://www.oracle.com/database/faq/" rel="noopener" target="_blank">Oracle Database FAQ (26ai)</a></li></ul><p class="fine">Checked on November 15, 2026. Vendors can change dates and terms, so confirm against the source before you rely on them.</p></div>
+</article>
+<aside class="art-side"><div class="panel navy"><p class="eyebrow">Related solution</p><h2 class="h3">Oracle Database Upgrade &amp; Migration</h2><p>Upgrades to 19c and 26ai with AutoUpgrade, multitenant conversion, and moves to Oracle Database@AWS, @Azure, @Google Cloud or PostgreSQL where it fits.</p><p><a class="btn btn-sm" href="/srash-site/solutions/oracle-database-upgrade-migration/">Explore <span class="arr" aria-hidden="true">&rarr;</span></a></p></div>
+<div class="panel side2"><h2 class="h3">Free 30-minute deadline check</h2><p class="fine">A senior engineer reviews what you run against these dates. We reply within one business day.</p><a class="btn btn-navy btn-sm" href="/srash-site/contact/">Book the call</a></div></aside>
+</div></section>
+<section class="section soft"><div class="wrap"><div class="sec-head"><div><p class="eyebrow ink">Keep reading</p><h2>More insights</h2></div><p><a class="link-arrow" href="/srash-site/insights/">All insights <span class="arr" aria-hidden="true">&rarr;</span></a></p></div><div class="related"><a class="post" href="/srash-site/insights/weblogic-12c-support-ends-december-2026/"><div class="post-art a1" aria-hidden="true"><span><small>Premier Support ends</small>Dec 2026</span></div>
+<p class="cat">Fusion Middleware</p><h3>WebLogic 12c support ends in December 2026. Here is what changes and what to do</h3><p>Premier Support for Fusion Middleware 12c ends in December 2026, Extended Support a year later. What the dates mean and how to plan the move to 14.1.2.</p><p class="meta">5 min read</p></a><a class="post" href="/srash-site/insights/rds-custom-for-oracle-retirement-march-2027/"><div class="post-art a2" aria-hidden="true"><span><small>Service retires</small>Mar 31, 2027</span></div>
+<p class="cat">AWS &amp; Oracle</p><h3>Amazon RDS Custom for Oracle retires on March 31, 2027. Your options, compared</h3><p>AWS is discontinuing RDS Custom for Oracle. What the notice says, the two migration methods AWS documents, and how to pick a target.</p><p class="meta">6 min read</p></a></div></div></section>
+<section class="final"><div class="wrap"><div><p class="eyebrow">Talk to us</p><h2>Talk to us before the deadline does the talking.</h2><p>Book a free 30-minute deadline check with a senior engineer. We reply within one business day and sign your NDA on request.</p></div>
+<div class="ctas"><a class="btn" href="/srash-site/contact/">Book a free deadline check <span class="arr" aria-hidden="true">&rarr;</span></a><a class="btn btn-ghost" href="mailto:hello@srash.io">hello@srash.io</a></div></div></section>
+</main>
+<footer class="site-footer"><div class="wrap ftr">
+<div class="ftr-about"><a class="logo" href="/srash-site/"><img src="/srash-site/assets/logo.svg" alt="" width="32" height="32"><span>SRASH</span></a>
+<p>Independent Oracle engineering. Fixed price, a written plan and a senior engineer on every job.</p>
+<p><a href="mailto:hello@srash.io">hello@srash.io</a><br>San Diego, California</p></div>
+<div><h2>Solutions</h2><ul><li><a href="/srash-site/solutions/weblogic-14-upgrade/">WebLogic 14.1.2 Upgrade</a></li><li><a href="/srash-site/solutions/rds-custom-exit/">RDS Custom for Oracle Exit</a></li><li><a href="/srash-site/solutions/oracle-database-upgrade-migration/">Oracle Database Upgrade &amp; Migration</a></li><li><a href="/srash-site/solutions/managed-dba/">Managed &amp; Fractional DBA</a></li><li><a href="/srash-site/solutions/ai-vector-search/">AI &amp; Vector Search</a></li><li><a href="/srash-site/solutions/forms-to-apex/">Oracle Forms to APEX</a></li><li><a href="/srash-site/solutions/contract-engineers/">Senior Contract Engineers</a></li></ul></div>
+<div><h2>Insights</h2><ul><li><a href="/srash-site/insights/weblogic-12c-support-ends-december-2026/">WebLogic 12c support ends</a></li><li><a href="/srash-site/insights/rds-custom-for-oracle-retirement-march-2027/">RDS Custom for Oracle retirement</a></li><li><a href="/srash-site/insights/oracle-upgrade-checklist-2026-2027/">Oracle upgrade checklist</a></li><li><a href="/srash-site/insights/">All insights</a></li></ul></div>
+<div><h2>Company</h2><ul><li><a href="/srash-site/about/">About</a></li><li><a href="/srash-site/contact/">Book a deadline check</a></li><li><a href="/srash-site/#engage">How we engage</a></li><li><a href="/srash-site/privacy/">Privacy</a></li></ul></div>
+</div><div class="wrap legal"><p>&copy; 2026 SRASH Digital LLC. Oracle, Java, WebLogic, AWS, Azure, Google Cloud and other names are trademarks of their respective owners. SRASH is an independent firm and is not affiliated with, endorsed by or a partner of these companies. Prices shown are typical ranges, not quotes.</p><p>San Diego, CA</p></div></footer>
+<script src="/srash-site/assets/site.js" defer></script>
+</body>
+</html>
