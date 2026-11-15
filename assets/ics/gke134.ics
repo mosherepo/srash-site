@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//SRASH//Platform deadlines//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:SRASH: Google GKE
+BEGIN:VEVENT
+UID:gke134-20270125@srash.io
+DTSTAMP:20261115T000000Z
+DTSTART;VALUE=DATE:20270125
+DTEND;VALUE=DATE:20270126
+SUMMARY:Google GKE: Kubernetes 1.34 ends standard support on GKE
+DESCRIPTION:Kubernetes 1.34 ends standard support on GKE. Source: https://docs.cloud.google.com/kubernetes-engine/docs/release-schedule How SRASH helps: https://srash.io/cloud/kubernetes-platform-engineering/
+URL:https://docs.cloud.google.com/kubernetes-engine/docs/release-schedule
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to Google GKE deadline
+END:VALARM
+END:VEVENT
+END:VCALENDAR

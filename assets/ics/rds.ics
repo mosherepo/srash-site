@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//SRASH//Platform deadlines//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:SRASH: AWS & Oracle
+BEGIN:VEVENT
+UID:rds-20270331@srash.io
+DTSTAMP:20261115T000000Z
+DTSTART;VALUE=DATE:20270331
+DTEND;VALUE=DATE:20270401
+SUMMARY:AWS & Oracle: Amazon RDS Custom for Oracle retires
+DESCRIPTION:Amazon RDS Custom for Oracle retires. Source: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/RDS-Custom-for-Oracle-end-of-support.html How SRASH helps: https://srash.io/data/oracle-middleware/
+URL:https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/RDS-Custom-for-Oracle-end-of-support.html
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to AWS & Oracle deadline
+END:VALARM
+END:VEVENT
+END:VCALENDAR

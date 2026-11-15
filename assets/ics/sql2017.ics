@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//SRASH//Platform deadlines//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:SRASH: Microsoft
+BEGIN:VEVENT
+UID:sql2017-20271013@srash.io
+DTSTAMP:20261115T000000Z
+DTSTART;VALUE=DATE:20271013
+DTEND;VALUE=DATE:20271014
+SUMMARY:Microsoft: SQL Server 2017 extended support ends
+DESCRIPTION:SQL Server 2017 extended support ends. Source: https://learn.microsoft.com/en-us/lifecycle/products/sql-server-2017 How SRASH helps: https://srash.io/data/database-upgrades/
+URL:https://learn.microsoft.com/en-us/lifecycle/products/sql-server-2017
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to Microsoft deadline
+END:VALARM
+END:VEVENT
+END:VCALENDAR

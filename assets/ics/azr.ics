@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//SRASH//Platform deadlines//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:SRASH: Azure
+BEGIN:VEVENT
+UID:azr-20280930@srash.io
+DTSTAMP:20261115T000000Z
+DTSTART;VALUE=DATE:20280930
+DTEND;VALUE=DATE:20281001
+SUMMARY:Azure: Azure Cache for Redis Basic\, Standard and Premium tiers retire
+DESCRIPTION:Azure Cache for Redis Basic\, Standard and Premium tiers retire. Source: https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/retirement-faq How SRASH helps: https://srash.io/data/redis-valkey/
+URL:https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/retirement-faq
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to Azure deadline
+END:VALARM
+END:VEVENT
+END:VCALENDAR

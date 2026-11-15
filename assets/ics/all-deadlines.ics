@@ -1,0 +1,202 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//SRASH//Platform deadlines//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:SRASH platform deadlines
+BEGIN:VEVENT
+UID:eks131-20261126@srash.io
+DTSTAMP:20261115T000000Z
+DTSTART;VALUE=DATE:20261126
+DTEND;VALUE=DATE:20261127
+SUMMARY:Amazon EKS: Kubernetes 1.31 leaves EKS extended support\; remaining clusters are auto-upgraded
+DESCRIPTION:Kubernetes 1.31 leaves EKS extended support\; remaining clusters are auto-upgraded. Source: https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-versions.html How SRASH helps: https://srash.io/cloud/kubernetes-platform-engineering/
+URL:https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-versions.html
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to Amazon EKS deadline
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:aks134-20261130@srash.io
+DTSTAMP:20261115T000000Z
+DTSTART;VALUE=DATE:20261130
+DTEND;VALUE=DATE:20261201
+SUMMARY:Azure AKS: Kubernetes 1.34 reaches end of life on AKS (community support)
+DESCRIPTION:Kubernetes 1.34 reaches end of life on AKS (community support). Source: https://learn.microsoft.com/en-us/azure/aks/supported-kubernetes-versions How SRASH helps: https://srash.io/cloud/kubernetes-platform-engineering/
+URL:https://learn.microsoft.com/en-us/azure/aks/supported-kubernetes-versions
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to Azure AKS deadline
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:eks134-20261202@srash.io
+DTSTAMP:20261115T000000Z
+DTSTART;VALUE=DATE:20261202
+DTEND;VALUE=DATE:20261203
+SUMMARY:Amazon EKS: Kubernetes 1.34 ends standard support on EKS\; extended-support billing starts
+DESCRIPTION:Kubernetes 1.34 ends standard support on EKS\; extended-support billing starts. Source: https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-versions.html How SRASH helps: https://srash.io/cloud/kubernetes-platform-engineering/
+URL:https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-versions.html
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to Amazon EKS deadline
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:fmw-20261231@srash.io
+DTSTAMP:20261115T000000Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+SUMMARY:Oracle: Fusion Middleware 12c (WebLogic\, SOA\, Forms) Premier Support ends
+DESCRIPTION:Fusion Middleware 12c (WebLogic\, SOA\, Forms) Premier Support ends. Source: https://docs.oracle.com/en/middleware/fusion-middleware/endsupport.html How SRASH helps: https://srash.io/data/oracle-middleware/
+URL:https://docs.oracle.com/en/middleware/fusion-middleware/endsupport.html
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to Oracle deadline
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:csql80-20270101@srash.io
+DTSTAMP:20261115T000000Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+SUMMARY:Google Cloud SQL: Cloud SQL for MySQL 8.0 moves to paid extended support
+DESCRIPTION:Cloud SQL for MySQL 8.0 moves to paid extended support. Source: https://docs.cloud.google.com/sql/docs/db-versions How SRASH helps: https://srash.io/data/database-upgrades/
+URL:https://docs.cloud.google.com/sql/docs/db-versions
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to Google Cloud SQL deadline
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:gke134-20270125@srash.io
+DTSTAMP:20261115T000000Z
+DTSTART;VALUE=DATE:20270125
+DTEND;VALUE=DATE:20270126
+SUMMARY:Google GKE: Kubernetes 1.34 ends standard support on GKE
+DESCRIPTION:Kubernetes 1.34 ends standard support on GKE. Source: https://docs.cloud.google.com/kubernetes-engine/docs/release-schedule How SRASH helps: https://srash.io/cloud/kubernetes-platform-engineering/
+URL:https://docs.cloud.google.com/kubernetes-engine/docs/release-schedule
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to Google GKE deadline
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:rdspg14-20270228@srash.io
+DTSTAMP:20261115T000000Z
+DTSTART;VALUE=DATE:20270228
+DTEND;VALUE=DATE:20270301
+SUMMARY:Amazon RDS: RDS for PostgreSQL 14 ends standard support\; Extended Support charges begin
+DESCRIPTION:RDS for PostgreSQL 14 ends standard support\; Extended Support charges begin. Source: https://docs.aws.amazon.com/AmazonRDS/latest/PostgreSQLReleaseNotes/postgresql-release-calendar.html How SRASH helps: https://srash.io/data/database-upgrades/
+URL:https://docs.aws.amazon.com/AmazonRDS/latest/PostgreSQLReleaseNotes/postgresql-release-calendar.html
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to Amazon RDS deadline
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:rds-20270331@srash.io
+DTSTAMP:20261115T000000Z
+DTSTART;VALUE=DATE:20270331
+DTEND;VALUE=DATE:20270401
+SUMMARY:AWS & Oracle: Amazon RDS Custom for Oracle retires
+DESCRIPTION:Amazon RDS Custom for Oracle retires. Source: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/RDS-Custom-for-Oracle-end-of-support.html How SRASH helps: https://srash.io/data/oracle-middleware/
+URL:https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/RDS-Custom-for-Oracle-end-of-support.html
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to AWS & Oracle deadline
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:azre-20270331@srash.io
+DTSTAMP:20261115T000000Z
+DTSTART;VALUE=DATE:20270331
+DTEND;VALUE=DATE:20270401
+SUMMARY:Azure: Azure Cache for Redis Enterprise and Enterprise Flash tiers retire
+DESCRIPTION:Azure Cache for Redis Enterprise and Enterprise Flash tiers retire. Source: https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/retirement-faq How SRASH helps: https://srash.io/data/redis-valkey/
+URL:https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/retirement-faq
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to Azure deadline
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:db21-20270731@srash.io
+DTSTAMP:20261115T000000Z
+DTSTART;VALUE=DATE:20270731
+DTEND;VALUE=DATE:20270801
+SUMMARY:Oracle: Oracle Database 21c Premier Support ends (no Extended Support)
+DESCRIPTION:Oracle Database 21c Premier Support ends (no Extended Support). Source: https://www.oracle.com/assets/lsp-tech-chart-069290.pdf How SRASH helps: https://srash.io/data/oracle-middleware/
+URL:https://www.oracle.com/assets/lsp-tech-chart-069290.pdf
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to Oracle deadline
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mongo70-20270831@srash.io
+DTSTAMP:20261115T000000Z
+DTSTART;VALUE=DATE:20270831
+DTEND;VALUE=DATE:20270901
+SUMMARY:MongoDB: MongoDB 7.0 reaches end of life (Server and Atlas Dedicated)
+DESCRIPTION:MongoDB 7.0 reaches end of life (Server and Atlas Dedicated). Source: https://www.mongodb.com/legal/support-policy/lifecycles How SRASH helps: https://srash.io/data/nosql-engineering/
+URL:https://www.mongodb.com/legal/support-policy/lifecycles
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to MongoDB deadline
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:sql2017-20271013@srash.io
+DTSTAMP:20261115T000000Z
+DTSTART;VALUE=DATE:20271013
+DTEND;VALUE=DATE:20271014
+SUMMARY:Microsoft: SQL Server 2017 extended support ends
+DESCRIPTION:SQL Server 2017 extended support ends. Source: https://learn.microsoft.com/en-us/lifecycle/products/sql-server-2017 How SRASH helps: https://srash.io/data/database-upgrades/
+URL:https://learn.microsoft.com/en-us/lifecycle/products/sql-server-2017
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to Microsoft deadline
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:fmwx-20271231@srash.io
+DTSTAMP:20261115T000000Z
+DTSTART;VALUE=DATE:20271231
+DTEND;VALUE=DATE:20280101
+SUMMARY:Oracle: Fusion Middleware 12c Extended Support ends
+DESCRIPTION:Fusion Middleware 12c Extended Support ends. Source: https://docs.oracle.com/en/middleware/fusion-middleware/endsupport.html How SRASH helps: https://srash.io/data/oracle-middleware/
+URL:https://docs.oracle.com/en/middleware/fusion-middleware/endsupport.html
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to Oracle deadline
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:azr-20280930@srash.io
+DTSTAMP:20261115T000000Z
+DTSTART;VALUE=DATE:20280930
+DTEND;VALUE=DATE:20281001
+SUMMARY:Azure: Azure Cache for Redis Basic\, Standard and Premium tiers retire
+DESCRIPTION:Azure Cache for Redis Basic\, Standard and Premium tiers retire. Source: https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/retirement-faq How SRASH helps: https://srash.io/data/redis-valkey/
+URL:https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/retirement-faq
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to Azure deadline
+END:VALARM
+END:VEVENT
+END:VCALENDAR

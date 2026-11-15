@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//SRASH//Platform deadlines//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:SRASH: Amazon RDS
+BEGIN:VEVENT
+UID:rdspg14-20270228@srash.io
+DTSTAMP:20261115T000000Z
+DTSTART;VALUE=DATE:20270228
+DTEND;VALUE=DATE:20270301
+SUMMARY:Amazon RDS: RDS for PostgreSQL 14 ends standard support\; Extended Support charges begin
+DESCRIPTION:RDS for PostgreSQL 14 ends standard support\; Extended Support charges begin. Source: https://docs.aws.amazon.com/AmazonRDS/latest/PostgreSQLReleaseNotes/postgresql-release-calendar.html How SRASH helps: https://srash.io/data/database-upgrades/
+URL:https://docs.aws.amazon.com/AmazonRDS/latest/PostgreSQLReleaseNotes/postgresql-release-calendar.html
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to Amazon RDS deadline
+END:VALARM
+END:VEVENT
+END:VCALENDAR

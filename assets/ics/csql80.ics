@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//SRASH//Platform deadlines//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:SRASH: Google Cloud SQL
+BEGIN:VEVENT
+UID:csql80-20270101@srash.io
+DTSTAMP:20261115T000000Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+SUMMARY:Google Cloud SQL: Cloud SQL for MySQL 8.0 moves to paid extended support
+DESCRIPTION:Cloud SQL for MySQL 8.0 moves to paid extended support. Source: https://docs.cloud.google.com/sql/docs/db-versions How SRASH helps: https://srash.io/data/database-upgrades/
+URL:https://docs.cloud.google.com/sql/docs/db-versions
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to Google Cloud SQL deadline
+END:VALARM
+END:VEVENT
+END:VCALENDAR

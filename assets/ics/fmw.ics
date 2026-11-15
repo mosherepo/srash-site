@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//SRASH//Platform deadlines//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:SRASH: Oracle
+BEGIN:VEVENT
+UID:fmw-20261231@srash.io
+DTSTAMP:20261115T000000Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+SUMMARY:Oracle: Fusion Middleware 12c (WebLogic\, SOA\, Forms) Premier Support ends
+DESCRIPTION:Fusion Middleware 12c (WebLogic\, SOA\, Forms) Premier Support ends. Source: https://docs.oracle.com/en/middleware/fusion-middleware/endsupport.html How SRASH helps: https://srash.io/data/oracle-middleware/
+URL:https://docs.oracle.com/en/middleware/fusion-middleware/endsupport.html
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to Oracle deadline
+END:VALARM
+END:VEVENT
+END:VCALENDAR

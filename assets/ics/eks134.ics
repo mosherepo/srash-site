@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//SRASH//Platform deadlines//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:SRASH: Amazon EKS
+BEGIN:VEVENT
+UID:eks134-20261202@srash.io
+DTSTAMP:20261115T000000Z
+DTSTART;VALUE=DATE:20261202
+DTEND;VALUE=DATE:20261203
+SUMMARY:Amazon EKS: Kubernetes 1.34 ends standard support on EKS\; extended-support billing starts
+DESCRIPTION:Kubernetes 1.34 ends standard support on EKS\; extended-support billing starts. Source: https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-versions.html How SRASH helps: https://srash.io/cloud/kubernetes-platform-engineering/
+URL:https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-versions.html
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to Amazon EKS deadline
+END:VALARM
+END:VEVENT
+END:VCALENDAR
