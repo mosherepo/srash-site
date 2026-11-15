@@ -29,8 +29,8 @@
     var s=f.querySelector('.form-status'),key=f.querySelector('[name=access_key]').value,fd=new FormData(f),to=f.getAttribute('data-mailto');
     if(fd.get('botcheck'))return;
     if(!key||key.indexOf('YOUR_')===0){
-      var body='Name: '+fd.get('name')+'\nEmail: '+fd.get('email')+'\nCompany: '+fd.get('company')+'\nTopic: '+fd.get('interest')+'\nDeadline: '+fd.get('deadline')+'\n\n'+fd.get('message');
-      location.href='mailto:'+to+'?subject='+encodeURIComponent('Deadline check request: '+(fd.get('company')||fd.get('name')))+'&body='+encodeURIComponent(body);
+      var body='Name: '+fd.get('name')+'\nEmail: '+fd.get('email')+'\nCompany: '+fd.get('company')+'\nRole: '+(fd.get('role')||'')+'\nTopic: '+fd.get('interest')+'\nPlatforms: '+fd.getAll('platforms').join(', ')+'\nDeadline: '+fd.get('deadline')+'\nTimeline: '+fd.get('timeline')+'\nBudget: '+fd.get('budget')+'\n\n'+fd.get('message');
+      location.href='mailto:'+to+'?subject='+encodeURIComponent('Free review request: '+(fd.get('company')||fd.get('name')))+'&body='+encodeURIComponent(body);
       s.textContent='Opening your email app to send the request.';return;
     }
     s.textContent='Sending\u2026';
@@ -39,4 +39,8 @@
       .then(function(j){if(j.success){location.href=f.getAttribute('data-thanks');}else{throw 0;}})
       .catch(function(){s.innerHTML='Something went wrong. Please email <a href="mailto:'+to+'">'+to+'</a>.';});
   });}
+  // print buttons on checklists and samples
+  d.querySelectorAll('[data-print]').forEach(function(b){b.addEventListener('click',function(){window.print();});});
+  // platforms checkboxes: send as one comma-separated field to Web3Forms
+  if(f){f.addEventListener('formdata',function(e){var v=e.formData.getAll('platforms');if(v.length){e.formData.delete('platforms');e.formData.append('platforms',v.join(', '));}});}
 })();
