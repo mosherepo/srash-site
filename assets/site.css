@@ -377,8 +377,6 @@ thead th{font-size:.8125rem;font-weight:600;color:var(--g6);border-bottom:1px so
  .dtable.sortable td[data-label="What happens"]{grid-column:1/-1}
  .dtable.sortable td::before{content:attr(data-label);display:block;font-size:.75rem;color:var(--g6)}
 }
-.credits .thumb{width:96px;aspect-ratio:3/2;overflow:hidden}
-.credits .thumb img{width:100%;height:100%;object-fit:cover}
 
 /* ---------- filters / chips */
 .filters{display:flex;flex-wrap:wrap;gap:16px 24px;align-items:flex-end;margin:0 0 20px;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
